@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理系统 - 物品管理</title>
+    <link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>物品管理</h2>
+        <div class="filter-section">
+            <select id="filterCategory" onchange="updateTypeOptions()">
+                <option value="">选择类别</option>
+            </select>
+            <select id="filterType" onchange="updateSubTypeOptions()">
+                <option value="">选择类型</option>
+            </select>
+            <select id="filterSubType" onchange="updateAttributeOptions()">
+                <option value="">选择子类型</option>
+            </select>
+            <select id="filterAttribute" onchange="toggleAttributeSelection(this)">
+                <option value="">选择属性</option>
+            </select>
+            <select id="filterColor" onchange="filterItems()">
+                <option value="">选择颜色</option>
+            </select>
+            <button class="reset-btn" onclick="resetFilters()">重置</button>
+        </div>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>图片</th>
+                        <th>类别</th>
+                        <th>类型</th>
+                        <th>子类型</th>
+                        <th>颜色</th>
+                        <th>属性</th>
+                        <th>数量</th>
+                        <th>规格</th>
+                        <th>位置</th>
+                    </tr>
+                </thead>
+                <tbody id="itemList"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="public/script.js"></script>
+</body>
+</html>
