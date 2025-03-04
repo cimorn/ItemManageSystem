@@ -131,8 +131,9 @@ ItemManage/
 
 ##### 修改 `item.json`
 在现有数据末尾添加：
-```json
+```diff
 [
+   ........
   {
     "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
     "category": "食品",
@@ -143,7 +144,22 @@ ItemManage/
     "quantity": 30,
     "spec": "1L",
     "location": "仓库CC"
-  }
+-  }
++  },
++  {
++    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
++    "category": "电子产品",
++    "type": "电脑",
++    "subType": "笔记本",
++    "color": "金色",
++    "attribute": [
++      "全新",
++      "超薄"
++    ],
++    "quantity": 8,
++    "spec": "32GB RAM",
++    "location": "仓库C"
++  }
 ]
 ```
 
