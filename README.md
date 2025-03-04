@@ -71,7 +71,7 @@ ItemManage/
 > 
 > 3. 运行服务器
 >  
->  打开index.html 文件
+> - 打开index.html 文件
 > 
 > - 右键点击文件内容，选择 “Open with Live Server”
 > 
