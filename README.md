@@ -38,13 +38,13 @@ ItemManage/
 #### 使用 Node.js
 
 > 1. 下载并安装 Node.js
->
+> 
 > 2. 安装 http-server 
->
-> 终端输入`npm install -g http-server`
->
-> 或者终端直接输入`node open.js`(服务器代码已经提供)
->
+> 
+> - 终端输入`npm install -g http-server`
+> 
+> - 或者终端直接输入`node open.js`(服务器代码已经提供)
+> 
 > 3. 打开浏览器，输入`http://localhost:8080`，即可看到页面
 
 
@@ -52,9 +52,9 @@ ItemManage/
 #### 使用 VS Code 的 Live Server 扩展
 
 > 1. 安装 VS Code
->
+> 
 > - 下载地址：code.visualstudio.com
-
+> 
 > 2. 安装 Live Server 扩展
 > 
 > - 打开 VS Code，点击左侧“扩展”图标（或按 Ctrl+Shift+X）
@@ -62,8 +62,8 @@ ItemManage/
 > - 搜索 “Live Server”，安装由 Ritwick Dey 开发的扩展
 > 
 > 3. 运行服务器
-> 
-> - 打开index.html 文件
+>  
+>  打开index.html 文件
 > 
 > - 右键点击文件内容，选择 “Open with Live Server”
 > 
