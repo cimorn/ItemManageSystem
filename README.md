@@ -71,7 +71,7 @@ ItemManage/
 > 
 > 3. 运行服务器
 >  
->  打开index.html 文件
+> - 打开index.html 文件
 > 
 > - 右键点击文件内容，选择 “Open with Live Server”
 > 
@@ -85,11 +85,11 @@ ItemManage/
 可以通过编辑 `data/label.json` 和 `data/item.json` 文件来添加想要的数据。以下是具体步骤：
 
 1. 编辑 `label.json`
-   - **添加新类别**：在 `categories` 数组中添加新类别名称。
-   - **添加类型**：在 `typeMap` 中为新类别添加对应的类型。
-   - **添加子类型**：在 `subTypeMap` 中为新类型添加子类型。
-   - **添加属性**：在 `attributeMap` 中为新子类型添加可选属性。
-   - **更新颜色**（可选）：在 `colors` 数组中添加新颜色。
+   - 添加新类别：在 `categories` 数组中添加新类别名称。
+   - 添加类型：在 `typeMap` 中为新类别添加对应的类型。
+   - 添加子类型：在 `subTypeMap` 中为新类型添加子类型。
+   - 添加属性：在 `attributeMap` 中为新子类型添加可选属性。
+   - 更新颜色（可选）：在 `colors` 数组中添加新颜色。
 
 2. 编辑 `item.json`
    - 添加新物品条目，确保每个字段与 `label.json` 中的定义匹配。
@@ -131,8 +131,9 @@ ItemManage/
 
 ##### 修改 `item.json`
 在现有数据末尾添加：
-```json
+```diff
 [
+   ........
   {
     "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
     "category": "食品",
@@ -143,14 +144,29 @@ ItemManage/
     "quantity": 30,
     "spec": "1L",
     "location": "仓库CC"
-  }
+-  }
++  },
++  {
++    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
++    "category": "电子产品",
++    "type": "电脑",
++    "subType": "笔记本",
++    "color": "金色",
++    "attribute": [
++      "全新",
++      "超薄"
++    ],
++    "quantity": 8,
++    "spec": "32GB RAM",
++    "location": "仓库C"
++  }
 ]
 ```
 
 ##### 注意事项
-- **字段一致性**：确保 `item.json` 中的 `category`、`type`、`subType`、`color` 和 `attribute` 值在 `label.json` 中有对应定义。
-- **JSON 格式**：编辑时保持正确的 JSON 格式，避免语法错误（如多余逗号）。
-- **图片链接**：使用有效的图片 URL，若链接失效，可替换为本地图片路径或占位图。
+- 字段一致性：确保 `item.json` 中的 `category`、`type`、`subType`、`color` 和 `attribute` 值在 `label.json` 中有对应定义。
+- JSON 格式：编辑时保持正确的 JSON 格式，避免语法错误（如多余逗号）。
+- 图片链接：使用有效的图片 URL，若链接失效，可替换为本地图片路径或占位图。
 
 
 ---
