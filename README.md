@@ -183,3 +183,13 @@ ItemManage/
 GitHub：[ItemManageSystem](https://github.com/cimorn/ItemManageSystem)
 
 
+
+
+
+#250306更新
+
+1. 增加位置筛选功能（label.json数据需要增加位置数据）
+
+2. 增加了点击图片会放大功能
+3. 把筛选的逻辑改为了包含选项
+

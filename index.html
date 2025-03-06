@@ -25,6 +25,9 @@
             <select id="filterColor" onchange="filterItems()">
                 <option value="">选择颜色</option>
             </select>
+            <select id="filterLocation" onchange="toggleLocationSelection(this)">
+                <option value="">选择位置</option>
+            </select>
             <button class="reset-btn" onclick="resetFilters()">重置</button>
         </div>
         <div class="table-wrapper">
@@ -45,6 +48,10 @@
                 <tbody id="itemList"></tbody>
             </table>
         </div>
+    </div>
+    <div id="imageModal" class="modal">
+        <span class="close">×</span>
+        <img class="modal-content" id="modalImage">
     </div>
     <script src="public/script.js"></script>
 </body>

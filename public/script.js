@@ -1,6 +1,7 @@
 let labelData = null;
 let itemData = null;
 let selectedAttributes = [];
+let selectedLocations = [];
 
 async function fetchData(url) {
     try {
@@ -22,12 +23,16 @@ async function populateFilters() {
 
     const filterCategory = document.getElementById('filterCategory');
     const filterColor = document.getElementById('filterColor');
+    const filterLocation = document.getElementById('filterLocation');
 
     labelData.categories.forEach(category => {
         filterCategory.appendChild(new Option(category, category));
     });
     labelData.colors.forEach(color => {
         filterColor.appendChild(new Option(color, color));
+    });
+    labelData.locations.forEach(location => {
+        filterLocation.appendChild(new Option(location, location));
     });
 
     updateTypeOptions();
@@ -79,6 +84,22 @@ function updateAttributeOptions() {
     filterItems();
 }
 
+function updateLocationOptions() {
+    const filterLocation = document.getElementById('filterLocation');
+    filterLocation.innerHTML = '';
+
+    const displayText = selectedLocations.length > 0 ? selectedLocations.join(', ') : '选择位置';
+    filterLocation.appendChild(new Option(displayText, ''));
+
+    if (labelData && labelData.locations) {
+        labelData.locations.forEach(location => {
+            const optionText = selectedLocations.includes(location) ? `[✅] ${location}` : location;
+            filterLocation.appendChild(new Option(optionText, location));
+        });
+    }
+    filterItems();
+}
+
 function toggleAttributeSelection(select) {
     const selectedValue = select.value;
     if (selectedValue === '') {
@@ -88,12 +109,26 @@ function toggleAttributeSelection(select) {
             selectedAttributes = selectedAttributes.filter(s => s !== selectedValue);
         } else {
             selectedAttributes.push(selectedValue);
-        }
+        };
     }
     updateAttributeOptions();
 }
 
-async function showItems(filterCat = '', filterType = '', filterSub = '', filterAttr = [], filterColor = '') {
+function toggleLocationSelection(select) {
+    const selectedValue = select.value;
+    if (selectedValue === '') {
+        selectedLocations = [];
+    } else {
+        if (selectedLocations.includes(selectedValue)) {
+            selectedLocations = selectedLocations.filter(s => s !== selectedValue);
+        } else {
+            selectedLocations.push(selectedValue);
+        };
+    }
+    updateLocationOptions();
+}
+
+async function showItems(filterCat = '', filterType = '', filterSub = '', filterAttr = [], filterColor = '', filterLocations = []) {
     if (!itemData) {
         itemData = await fetchData('data/item.json');
         if (!itemData) return;
@@ -102,17 +137,17 @@ async function showItems(filterCat = '', filterType = '', filterSub = '', filter
     const tbody = document.getElementById('itemList');
     tbody.innerHTML = '';
     itemData.forEach((item, index) => {
-        const attrMatch = filterAttr.length === 0 || filterAttr.every(attr => item.attribute.includes(attr));
-        if (
-            (!filterCat || item.category === filterCat) &&
-            (!filterType || item.type === filterType) &&
-            (!filterSub || item.subType === filterSub) &&
-            attrMatch &&
-            (!filterColor || item.color === filterColor)
-        ) {
+        const catMatch = filterCat === '' || item.category.includes(filterCat);
+        const typeMatch = filterType === '' || item.type.includes(filterType);
+        const subMatch = filterSub === '' || item.subType.includes(filterSub);
+        const attrMatch = filterAttr.length === 0 || filterAttr.some(attr => item.attribute.includes(attr));
+        const colorMatch = filterColor === '' || item.color.includes(filterColor);
+        const locationMatch = filterLocations.length === 0 || filterLocations.includes(item.location);
+
+        if (catMatch && typeMatch && subMatch && attrMatch && colorMatch && locationMatch) {
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td><img src="${item.image}" alt="图片" onerror="this.src='https://via.placeholder.com/120'"></td>
+                <td><img src="${item.image}" alt="图片" onerror="this.src='https://via.placeholder.com/120'" onclick="openModal('${item.image}')"></td>
                 <td>${item.category}</td>
                 <td>${item.type}</td>
                 <td>${item.subType}</td>
@@ -127,12 +162,42 @@ async function showItems(filterCat = '', filterType = '', filterSub = '', filter
     });
 }
 
+function openModal(imageSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    modal.style.display = 'block';
+    modalImg.src = imageSrc;
+}
+
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+}
+
+document.querySelector('.close').addEventListener('click', closeModal);
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('imageModal');
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+
 async function filterItems() {
     const filterCat = document.getElementById('filterCategory').value;
     const filterType = document.getElementById('filterType').value;
     const filterSub = document.getElementById('filterSubType').value;
     const filterColor = document.getElementById('filterColor').value;
-    await showItems(filterCat, filterType, filterSub, selectedAttributes, filterColor);
+
+    console.log('筛选条件：', {
+        filterCat,
+        filterType,
+        filterSub,
+        filterAttr: selectedAttributes,
+        filterColor,
+        filterLocations: selectedLocations
+    });
+
+    await showItems(filterCat, filterType, filterSub, selectedAttributes, filterColor, selectedLocations);
 }
 
 function resetFilters() {
@@ -141,6 +206,7 @@ function resetFilters() {
     const filterSubType = document.getElementById('filterSubType');
     const filterAttribute = document.getElementById('filterAttribute');
     const filterColor = document.getElementById('filterColor');
+    const filterLocation = document.getElementById('filterLocation');
 
     filterCategory.value = '';
     filterType.innerHTML = '<option value="">选择类型</option>';
@@ -148,6 +214,16 @@ function resetFilters() {
     filterAttribute.innerHTML = '<option value="">选择属性</option>';
     selectedAttributes = [];
     filterColor.value = '';
+    filterLocation.innerHTML = '<option value="">选择位置</option>';
+    selectedLocations = [];
+
+    // 重新加载位置选项
+    if (labelData && labelData.locations) {
+        labelData.locations.forEach(location => {
+            filterLocation.appendChild(new Option(location, location));
+        });
+    }
+
     filterItems();
 }
 

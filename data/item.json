@@ -5,10 +5,16 @@
     "type": "洗液",
     "subType": "洗衣液",
     "color": "蓝色",
-    "attribute": ["浓缩", "温和"],
+    "attribute": [
+      "浓缩",
+      "温和"
+    ],
     "quantity": 20,
     "spec": "2L",
-    "location": "仓库S"
+    "location": [
+      "仓库C",
+      "仓库A"
+    ]
   },
   {
     "image": "http://gips3.baidu.com/it/u=100751361,1567855012&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
@@ -16,7 +22,10 @@
     "type": "护理",
     "subType": "护发素",
     "color": "白色",
-    "attribute": ["滋润", "防脱"],
+    "attribute": [
+      "滋润",
+      "防脱"
+    ],
     "quantity": 15,
     "spec": "500ml",
     "location": "仓库T"
@@ -27,7 +36,10 @@
     "type": "药品",
     "subType": "感冒药",
     "color": "无色",
-    "attribute": ["速效", "儿童适用"],
+    "attribute": [
+      "速效",
+      "儿童适用"
+    ],
     "quantity": 30,
     "spec": "10片/盒",
     "location": "仓库U"
@@ -38,10 +50,16 @@
     "type": "器械",
     "subType": "体温计",
     "color": "银色",
-    "attribute": ["电子", "快速"],
+    "attribute": [
+      "电子",
+      "快速"
+    ],
     "quantity": 25,
     "spec": "单支",
-    "location": "仓库V"
+    "location": [
+      "仓库C",
+      "仓库A"
+    ]
   },
   {
     "image": "http://gips2.baidu.com/it/u=3944689179,983354166&fm=3028&app=3028&f=JPEG&fmt=auto?w=1024&h=1024",
@@ -49,7 +67,10 @@
     "type": "球类",
     "subType": "篮球",
     "color": "橙色",
-    "attribute": ["耐磨", "标准尺寸"],
+    "attribute": [
+      "耐磨",
+      "标准尺寸"
+    ],
     "quantity": 12,
     "spec": "7号",
     "location": "仓库W"
@@ -60,7 +81,10 @@
     "type": "健身",
     "subType": "哑铃",
     "color": "黑色",
-    "attribute": ["可调节", "橡胶包覆"],
+    "attribute": [
+      "可调节",
+      "橡胶包覆"
+    ],
     "quantity": 8,
     "spec": "5kg",
     "location": "仓库X"
@@ -71,7 +95,10 @@
     "type": "清洁",
     "subType": "洗洁精",
     "color": "绿色",
-    "attribute": ["去油", "环保"],
+    "attribute": [
+      "去油",
+      "环保"
+    ],
     "quantity": 18,
     "spec": "1L",
     "location": "仓库Y"
@@ -82,7 +109,10 @@
     "type": "防护",
     "subType": "口罩",
     "color": "蓝色",
-    "attribute": ["医用", "一次性"],
+    "attribute": [
+      "医用",
+      "一次性"
+    ],
     "quantity": 50,
     "spec": "50只/包",
     "location": "仓库Z"
@@ -93,7 +123,10 @@
     "type": "户外",
     "subType": "登山杖",
     "color": "银色",
-    "attribute": ["轻便", "可折叠"],
+    "attribute": [
+      "轻便",
+      "可折叠"
+    ],
     "quantity": 10,
     "spec": "单支",
     "location": "仓库AA"
@@ -104,7 +137,10 @@
     "type": "个人护理",
     "subType": "牙膏",
     "color": "白色",
-    "attribute": ["美白", "清新"],
+    "attribute": [
+      "美白",
+      "清新"
+    ],
     "quantity": 40,
     "spec": "120g",
     "location": "仓库BB"
@@ -121,7 +157,10 @@
     ],
     "quantity": 8,
     "spec": "256GB",
-    "location": "仓库B"
+    "location": [
+      "仓库C",
+      "仓库A"
+    ]
   },
   {
     "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
@@ -317,7 +356,10 @@
     ],
     "quantity": 14,
     "spec": "S",
-    "location": "仓库G"
+    "location": [
+      "仓库C",
+      "仓库A"
+    ]
   },
   {
     "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
@@ -373,6 +415,9 @@
     ],
     "quantity": 8,
     "spec": "32GB RAM",
-    "location": "仓库C"
+    "location": [
+      "仓库C",
+      "仓库A"
+    ]
   }
 ]
