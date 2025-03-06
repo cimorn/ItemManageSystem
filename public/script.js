@@ -1,6 +1,7 @@
 let labelData = null;
 let itemData = null;
 let selectedAttributes = [];
+let selectedColors = [];
 let selectedLocations = [];
 
 async function fetchData(url) {
@@ -84,6 +85,22 @@ function updateAttributeOptions() {
     filterItems();
 }
 
+function updateColorOptions() {
+    const filterColor = document.getElementById('filterColor');
+    filterColor.innerHTML = '';
+
+    const displayText = selectedColors.length > 0 ? selectedColors.join(', ') : '选择颜色';
+    filterColor.appendChild(new Option(displayText, ''));
+
+    if (labelData && labelData.colors) {
+        labelData.colors.forEach(color => {
+            const optionText = selectedColors.includes(color) ? `[✅] ${color}` : color;
+            filterColor.appendChild(new Option(optionText, color));
+        });
+    }
+    filterItems();
+}
+
 function updateLocationOptions() {
     const filterLocation = document.getElementById('filterLocation');
     filterLocation.innerHTML = '';
@@ -114,6 +131,20 @@ function toggleAttributeSelection(select) {
     updateAttributeOptions();
 }
 
+function toggleColorSelection(select) {
+    const selectedValue = select.value;
+    if (selectedValue === '') {
+        selectedColors = [];
+    } else {
+        if (selectedColors.includes(selectedValue)) {
+            selectedColors = selectedColors.filter(s => s !== selectedValue);
+        } else {
+            selectedColors.push(selectedValue);
+        };
+    }
+    updateColorOptions();
+}
+
 function toggleLocationSelection(select) {
     const selectedValue = select.value;
     if (selectedValue === '') {
@@ -128,7 +159,7 @@ function toggleLocationSelection(select) {
     updateLocationOptions();
 }
 
-async function showItems(filterCat = '', filterType = '', filterSub = '', filterAttr = [], filterColor = '', filterLocations = []) {
+async function showItems(filterCat = '', filterType = '', filterSub = '', filterAttrs = [], filterColors = [], filterLocations = []) {
     if (!itemData) {
         itemData = await fetchData('data/item.json');
         if (!itemData) return;
@@ -140,9 +171,18 @@ async function showItems(filterCat = '', filterType = '', filterSub = '', filter
         const catMatch = filterCat === '' || item.category.includes(filterCat);
         const typeMatch = filterType === '' || item.type.includes(filterType);
         const subMatch = filterSub === '' || item.subType.includes(filterSub);
-        const attrMatch = filterAttr.length === 0 || filterAttr.some(attr => item.attribute.includes(attr));
-        const colorMatch = filterColor === '' || item.color.includes(filterColor);
-        const locationMatch = filterLocations.length === 0 || filterLocations.includes(item.location);
+        // 属性筛选：单选包含，多选与
+        const attrMatch = filterAttrs.length === 0 || 
+                          (filterAttrs.length === 1 ? item.attribute.some(attr => attr.includes(filterAttrs[0])) : 
+                          filterAttrs.every(attr => item.attribute.some(itemAttr => itemAttr.includes(attr))));
+        // 颜色筛选：单选包含，多选与
+        const colorMatch = filterColors.length === 0 || 
+                          (filterColors.length === 1 ? item.color.includes(filterColors[0]) : 
+                          filterColors.every(color => item.color.includes(color)));
+        // 位置筛选：单选包含，多选与
+        const locationMatch = filterLocations.length === 0 || 
+                             (filterLocations.length === 1 ? item.location.includes(filterLocations[0]) : 
+                             filterLocations.every(loc => item.location.includes(loc)));
 
         if (catMatch && typeMatch && subMatch && attrMatch && colorMatch && locationMatch) {
             const row = document.createElement('tr');
@@ -186,18 +226,17 @@ async function filterItems() {
     const filterCat = document.getElementById('filterCategory').value;
     const filterType = document.getElementById('filterType').value;
     const filterSub = document.getElementById('filterSubType').value;
-    const filterColor = document.getElementById('filterColor').value;
 
     console.log('筛选条件：', {
         filterCat,
         filterType,
         filterSub,
-        filterAttr: selectedAttributes,
-        filterColor,
+        filterAttrs: selectedAttributes,
+        filterColors: selectedColors,
         filterLocations: selectedLocations
     });
 
-    await showItems(filterCat, filterType, filterSub, selectedAttributes, filterColor, selectedLocations);
+    await showItems(filterCat, filterType, filterSub, selectedAttributes, selectedColors, selectedLocations);
 }
 
 function resetFilters() {
@@ -213,15 +252,22 @@ function resetFilters() {
     filterSubType.innerHTML = '<option value="">选择子类型</option>';
     filterAttribute.innerHTML = '<option value="">选择属性</option>';
     selectedAttributes = [];
-    filterColor.value = '';
+    filterColor.innerHTML = '<option value="">选择颜色</option>';
+    selectedColors = [];
     filterLocation.innerHTML = '<option value="">选择位置</option>';
     selectedLocations = [];
 
-    // 重新加载位置选项
-    if (labelData && labelData.locations) {
-        labelData.locations.forEach(location => {
-            filterLocation.appendChild(new Option(location, location));
-        });
+    if (labelData) {
+        if (labelData.colors) {
+            labelData.colors.forEach(color => {
+                filterColor.appendChild(new Option(color, color));
+            });
+        }
+        if (labelData.locations) {
+            labelData.locations.forEach(location => {
+                filterLocation.appendChild(new Option(location, location));
+            });
+        }
     }
 
     filterItems();
