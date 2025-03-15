@@ -1,167 +1,305 @@
+/* 全局样式 */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f0f2f5;
-    line-height: 1.6;
+    font-family: 'Segoe UI', Arial, sans-serif; /* 设置字体 */
+    margin: 0; /* 移除默认外边距 */
+    padding: 20px; /* 添加内边距 */
+    background-color: #f0f2f5; /* 背景颜色 */
+    line-height: 1.6; /* 行高 */
 }
 
+/* 登录界面样式 */
+.login-container {
+    background-color: white; /* 白色背景 */
+    padding: 30px; /* 内边距 */
+    border-radius: 10px; /* 圆角 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 阴影 */
+    max-width: 400px; /* 最大宽度 */
+    margin: 0 auto; /* 居中 */
+    text-align: center; /* 文本居中 */
+}
+
+.login-container h2 {
+    color: #2c3e50; /* 标题颜色 */
+    border-bottom: 2px solid #3498db; /* 下边框 */
+    padding-bottom: 10px; /* 下内边距 */
+    margin-top: 0; /* 移除顶部外边距 */
+    font-size: 24px; /* 字体大小 */
+}
+
+.form-group {
+    margin-bottom: 15px; /* 下外边距 */
+    text-align: left; /* 左对齐 */
+}
+
+.form-group label {
+    display: block; /* 块级显示 */
+    margin-bottom: 5px; /* 下外边距 */
+    color: #2c3e50; /* 颜色 */
+}
+
+.form-group input {
+    width: 100%; /* 宽度占满 */
+    padding: 10px; /* 内边距 */
+    border: 1px solid #ddd; /* 边框 */
+    border-radius: 5px; /* 圆角 */
+    font-size: 14px; /* 字体大小 */
+    box-sizing: border-box; /* 包含边框和内边距 */
+}
+
+.login-btn {
+    background-color: #3498db; /* 背景颜色 */
+    color: white; /* 文字颜色 */
+    border: none; /* 无边框 */
+    padding: 10px 30px; /* 内边距 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 鼠标指针 */
+    transition: background-color 0.3s; /* 背景颜色过渡 */
+    width: 100%; /* 宽度占满 */
+    font-size: 16px; /* 字体大小 */
+}
+
+.login-btn:hover {
+    background-color: #2980b9; /* 悬停时颜色 */
+}
+
+.error-message {
+    color: #e74c3c; /* 错误信息颜色 */
+    margin-top: 10px; /* 上外边距 */
+    font-size: 14px; /* 字体大小 */
+}
+
+/* 主内容样式 */
 .container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    max-width: 1400px;
-    margin: 0 auto;
+    background-color: white; /* 白色背景 */
+    padding: 20px; /* 内边距 */
+    border-radius: 10px; /* 圆角 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 阴影 */
+    max-width: 1400px; /* 最大宽度 */
+    margin: 0 auto; /* 居中 */
 }
 
 h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
-    margin-top: 0;
-    font-size: 24px;
-    text-align: center;
+    color: #2c3e50; /* 标题颜色 */
+    border-bottom: 2px solid #3498db; /* 下边框 */
+    padding-bottom: 10px; /* 下内边距 */
+    margin-top: 0; /* 移除顶部外边距 */
+    font-size: 24px; /* 字体大小 */
+    text-align: center; /* 居中 */
 }
 
 .filter-section {
-    margin-bottom: 20px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
+    margin-bottom: 20px; /* 下外边距 */
+    display: flex; /* 弹性布局 */
+    flex-direction: column; /* 垂直排列 */
+    gap: 15px; /* 行间距 */
+}
+
+.filter-row {
+    display: flex; /* 弹性布局 */
+    gap: 10px; /* 元素间距 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
 }
 
 .filter-section select {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-    min-width: 150px;
-    height: 40px;
-    box-sizing: border-box;
-    background-color: white;
-    flex-shrink: 0;
+    padding: 10px; /* 内边距 */
+    border: 1px solid #ddd; /* 边框 */
+    border-radius: 5px; /* 圆角 */
+    font-size: 14px; /* 字体大小 */
+    min-width: 140px; /* 最小宽度 */
+    max-width: 160px; /* 最大宽度 */
+    height: 40px; /* 高度 */
+    box-sizing: border-box; /* 包含边框和内边距 */
+    background-color: #fff; /* 背景颜色 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* 阴影 */
+    transition: border-color 0.3s, box-shadow 0.3s; /* 过渡效果 */
+}
+
+.filter-section select:hover,
+.filter-section select:focus {
+    border-color: #3498db; /* 悬停/聚焦时边框颜色 */
+    box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3); /* 阴影 */
+    outline: none; /* 移除默认轮廓 */
 }
 
 .reset-btn {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    flex-shrink: 0;
+    background-color: #3498db; /* 背景颜色 */
+    color: white; /* 文字颜色 */
+    border: none; /* 无边框 */
+    padding: 10px 25px; /* 内边距 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 鼠标指针 */
+    transition: background-color 0.3s; /* 背景颜色过渡 */
+    font-size: 14px; /* 字体大小 */
+    height: 40px; /* 高度 */
+    min-width: 140px; /* 最小宽度 */
+    max-width: 160px; /* 最大宽度 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影 */
 }
 
 .reset-btn:hover {
-    background-color: #2980b9;
+    background-color: #2980b9; /* 悬停时颜色 */
+    box-shadow: 0 2px 10px rgba(41, 128, 185, 0.3); /* 阴影 */
 }
 
 .table-wrapper {
-    overflow-x: auto;
+    overflow-x: auto; /* 支持水平滚动 */
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    font-size: 16px;
+    width: 100%; /* 宽度占满 */
+    border-collapse: collapse; /* 边框合并 */
+    margin-top: 10px; /* 上外边距 */
+    font-size: 16px; /* 字体大小 */
 }
 
 th, td {
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #eee;
-    min-width: 100px;
+    padding: 15px; /* 内边距 */
+    text-align: center; /* 居中 */
+    border-bottom: 1px solid #eee; /* 下边框 */
+    min-width: 100px; /* 最小宽度 */
 }
 
 th {
-    background-color: #3498db;
-    color: white;
-    font-weight: 600;
+    background-color: #3498db; /* 背景颜色 */
+    color: white; /* 文字颜色 */
+    font-weight: 600; /* 字体加粗 */
 }
 
 tr:hover {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* 悬停时背景颜色 */
 }
 
 img {
-    max-width: 120px;
-    max-height: 120px;
-    border-radius: 5px;
-    display: block;
-    margin: 0 auto;
-    cursor: pointer;
+    max-width: 120px; /* 最大宽度 */
+    max-height: 120px; /* 最大高度 */
+    border-radius: 5px; /* 圆角 */
+    display: block; /* 块级显示 */
+    margin: 0 auto; /* 居中 */
+    cursor: pointer; /* 鼠标指针 */
+    transition: transform 0.2s; /* 缩放过渡 */
+}
+
+img:hover {
+    transform: scale(1.05); /* 悬停时放大 */
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-    justify-content: center;
-    align-items: center;
+    display: none; /* 默认隐藏 */
+    position: fixed; /* 固定定位 */
+    z-index: 1000; /* 层级 */
+    left: 0; /* 左边缘 */
+    top: 0; /* 上边缘 */
+    width: 100%; /* 宽度占满 */
+    height: 100%; /* 高度占满 */
+    overflow: auto; /* 支持滚动 */
+    background-color: rgba(0, 0, 0, 0.9); /* 背景颜色 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
 }
 
 .modal-content {
-    max-width: 90%;
-    max-height: 90vh;
-    margin: auto;
-    display: block;
-    object-fit: contain;
+    max-width: 90%; /* 最大宽度 */
+    max-height: 90vh; /* 最大高度 */
+    display: block; /* 块级显示 */
+    object-fit: contain; /* 保持图片比例 */
 }
 
 .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-    cursor: pointer;
+    position: absolute; /* 绝对定位 */
+    top: 15px; /* 上边缘距离 */
+    right: 35px; /* 右边缘距离 */
+    color: #f1f1f1; /* 颜色 */
+    font-size: 40px; /* 字体大小 */
+    font-weight: bold; /* 加粗 */
+    transition: 0.3s; /* 过渡效果 */
+    cursor: pointer; /* 鼠标指针 */
 }
 
 .close:hover,
 .close:focus {
-    color: #bbb;
-    text-decoration: none;
+    color: #bbb; /* 悬停/聚焦时颜色 */
+    text-decoration: none; /* 无下划线 */
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-    .filter-section {
-        padding-bottom: 10px;
+/* 桌面端优化 */
+@media (min-width: 769px) {
+    .filter-row {
+        flex-wrap: nowrap; /* 不换行 */
+        justify-content: space-between; /* 两端对齐 */
+        max-width: 700px; /* 最大宽度 */
+        margin: 0 auto; /* 居中 */
     }
     .filter-section select {
-        min-width: 120px;
-        font-size: 12px;
+        min-width: 140px; /* 最小宽度 */
+        max-width: 160px; /* 最大宽度 */
     }
     .reset-btn {
-        padding: 10px 20px;
-        font-size: 12px;
+        min-width: 140px; /* 最小宽度 */
+        max-width: 160px; /* 最大宽度 */
+        padding: 10px 25px; /* 内边距 */
+    }
+}
+
+/* 移动端优化 */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* 内边距，减少以适应小屏幕 */
+    }
+    .filter-section {
+        gap: 12px; /* 行间距，保持两行之间的间距 */
+        padding: 0 10px; /* 左右内边距，防止内容紧贴边缘 */
+    }
+    .filter-row {
+        flex-wrap: nowrap; /* 不换行，确保每行四个元素 */
+        justify-content: flex-start; /* 左对齐，便于滑动查看 */
+        gap: 10px; /* 元素间距调整为 10px，增加舒适度 */
+        overflow-x: auto; /* 支持水平滚动 */
+        white-space: nowrap; /* 防止元素换行 */
+        padding-bottom: 10px; /* 添加底部内边距，避免滚动条遮挡 */
+    }
+    .filter-section select {
+        min-width: 80px; /* 统一最小宽度为 80px */
+        max-width: 80px; /* 固定最大宽度为 80px，确保一致 */
+        font-size: 12px; /* 字体大小减小，适应小屏幕 */
+        height: 36px; /* 高度稍减小，保持紧凑 */
+        padding: 6px; /* 内边距减小 */
+        flex: 0 0 80px; /* 固定宽度为 80px，不随内容伸缩 */
+        box-sizing: border-box; /* 包含边框和内边距 */
+    }
+    .reset-btn {
+        min-width: 80px; /* 与筛选框宽度一致 */
+        max-width: 80px; /* 固定最大宽度为 80px */
+        padding: 6px 10px; /* 内边距调整，确保文字居中 */
+        font-size: 12px; /* 字体大小一致 */
+        height: 36px; /* 高度与筛选框一致 */
+        flex: 0 0 80px; /* 固定宽度为 80px */
+        box-sizing: border-box; /* 包含边框和内边距 */
     }
     img {
-        max-width: 100px;
-        max-height: 100px;
+        max-width: 100px; /* 图片最大宽度 */
+        max-height: 100px; /* 图片最大高度 */
     }
     table {
-        font-size: 14px;
+        font-size: 14px; /* 表格字体大小 */
     }
     th, td {
-        padding: 10px;
-        min-width: 80px;
+        padding: 10px; /* 表格单元格内边距 */
+        min-width: 80px; /* 表格单元格最小宽度 */
+    }
+    .login-container {
+        padding: 20px; /* 登录容器内边距 */
+        max-width: 300px; /* 登录容器最大宽度 */
+    }
+    /* 隐藏滚动条美化（可选，视浏览器支持情况） */
+    .filter-row::-webkit-scrollbar {
+        height: 6px; /* 滚动条高度 */
+    }
+    .filter-row::-webkit-scrollbar-thumb {
+        background: #3498db; /* 滚动条颜色 */
+        border-radius: 3px; /* 圆角 */
+    }
+    .filter-row::-webkit-scrollbar-track {
+        background: #f0f2f5; /* 滚动条轨道颜色 */
     }
 }

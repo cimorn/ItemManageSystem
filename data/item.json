@@ -1,423 +1,123 @@
 [
   {
     "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "洗护",
-    "type": "洗液",
-    "subType": "洗衣液",
+    "category": "电子产品",
+    "type": "手机",
+    "subType": "智能手机",
     "color": "蓝色",
-    "attribute": [
-      "浓缩",
-      "温和"
-    ],
-    "quantity": 20,
-    "spec": "2L",
-    "location": [
-      "仓库C",
-      "仓库A"
-    ]
-  },
-  {
-    "image": "http://gips3.baidu.com/it/u=100751361,1567855012&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "洗护",
-    "type": "护理",
-    "subType": "护发素",
-    "color": "白色",
-    "attribute": [
-      "滋润",
-      "防脱"
-    ],
+    "attribute": ["全新", "大屏幕"],
     "quantity": 15,
-    "spec": "500ml",
-    "location": "仓库T"
+    "spec": "128GB",
+    "location": ["仓库A", "仓库B"]
   },
   {
-    "image": "http://gips0.baidu.com/it/u=3560029307,576412274&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
+    "image": "http://gips2.baidu.com/it/u=195724436,3554684702&fm=3028&app=3028&f=JPEG&fmt=auto?w=1280&h=960",
+    "category": "洗护",
+    "type": "沐浴露",
+    "subType": "滋润",
+    "color": "白色",
+    "attribute": ["保湿", "香氛"],
+    "quantity": 20,
+    "spec": "750ml",
+    "location": ["仓库E", "仓库F"]
+  },
+  {
+    "image": "https://gips2.baidu.com/it/u=1651586290,17201034&fm=3028&app=3028&f=JPEG&fmt=auto&q=100&size=f600_800",
+    "category": "电子产品",
+    "type": "手机",
+    "subType": "智能手机",
+    "color": "蓝色",
+    "attribute": ["全新", "大屏幕"],
+    "quantity": 15,
+    "spec": "1GB",
+    "location": ["仓库AC", "仓库B"]
+  },
+  {
+    "image": "http://gips2.baidu.com/it/u=195724436,3554684702&fm=3028&app=3028&f=JPEG&fmt=auto?w=1280&h=960",
+    "category": "电子产品",
+    "type": "电脑",
+    "subType": "笔记本",
+    "color": "银色",
+    "attribute": ["轻薄", "高性能"],
+    "quantity": 8,
+    "spec": "16GB RAM",
+    "location": "仓库C"
+  },
+  {
+    "image": "http://gips0.baidu.com/it/u=3822353666,2757632348&fm=3028&app=3028&f=JPEG&fmt=auto?w=720&h=1280",
+    "category": "洗护",
+    "type": "沐浴露",
+    "subType": "滋润",
+    "color": "白色",
+    "attribute": ["保湿", "香氛"],
+    "quantity": 20,
+    "spec": "750ml",
+    "location": ["仓库E", "仓库F"]
+  },
+  {
+    "image": "http://gips2.baidu.com/it/u=3944689179,983354166&fm=3028&app=3028&f=JPEG&fmt=auto?w=1024&h=1024",
     "category": "医疗",
     "type": "药品",
     "subType": "感冒药",
     "color": "无色",
-    "attribute": [
-      "速效",
-      "儿童适用"
-    ],
-    "quantity": 30,
-    "spec": "10片/盒",
-    "location": "仓库U"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3822353666,2757632348&fm=3028&app=3028&f=JPEG&fmt=auto?w=720&h=1280",
-    "category": "医疗",
-    "type": "器械",
-    "subType": "体温计",
-    "color": "银色",
-    "attribute": [
-      "电子",
-      "快速"
-    ],
-    "quantity": 25,
-    "spec": "单支",
-    "location": [
-      "仓库C",
-      "仓库A"
-    ]
-  },
-  {
-    "image": "http://gips2.baidu.com/it/u=3944689179,983354166&fm=3028&app=3028&f=JPEG&fmt=auto?w=1024&h=1024",
-    "category": "体育",
-    "type": "球类",
-    "subType": "篮球",
-    "color": "橙色",
-    "attribute": [
-      "耐磨",
-      "标准尺寸"
-    ],
-    "quantity": 12,
-    "spec": "7号",
-    "location": "仓库W"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "体育",
-    "type": "健身",
-    "subType": "哑铃",
-    "color": "黑色",
-    "attribute": [
-      "可调节",
-      "橡胶包覆"
-    ],
-    "quantity": 8,
-    "spec": "5kg",
-    "location": "仓库X"
-  },
-  {
-    "image": "http://gips3.baidu.com/it/u=100751361,1567855012&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "洗护",
-    "type": "清洁",
-    "subType": "洗洁精",
-    "color": "绿色",
-    "attribute": [
-      "去油",
-      "环保"
-    ],
-    "quantity": 18,
-    "spec": "1L",
-    "location": "仓库Y"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3560029307,576412274&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "医疗",
-    "type": "防护",
-    "subType": "口罩",
-    "color": "蓝色",
-    "attribute": [
-      "医用",
-      "一次性"
-    ],
-    "quantity": 50,
-    "spec": "50只/包",
-    "location": "仓库Z"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3822353666,2757632348&fm=3028&app=3028&f=JPEG&fmt=auto?w=720&h=1280",
-    "category": "体育",
-    "type": "户外",
-    "subType": "登山杖",
-    "color": "银色",
-    "attribute": [
-      "轻便",
-      "可折叠"
-    ],
-    "quantity": 10,
-    "spec": "单支",
-    "location": "仓库AA"
-  },
-  {
-    "image": "http://gips2.baidu.com/it/u=3944689179,983354166&fm=3028&app=3028&f=JPEG&fmt=auto?w=1024&h=1024",
-    "category": "洗护",
-    "type": "个人护理",
-    "subType": "牙膏",
-    "color": "白色",
-    "attribute": [
-      "美白",
-      "清新"
-    ],
+    "attribute": ["速效", "儿童适用"],
     "quantity": 40,
-    "spec": "120g",
-    "location": "仓库BB"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "电子产品",
-    "type": "手机",
-    "subType": "智能手机",
-    "color": "蓝色",
-    "attribute": [
-      "二手",
-      "大屏幕"
-    ],
-    "quantity": 8,
-    "spec": "256GB",
-    "location": [
-      "仓库C",
-      "仓库A"
-    ]
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "电子产品",
-    "type": "手机",
-    "subType": "功能机",
-    "color": "黑色",
-    "attribute": [
-      "全新",
-      "轻便"
-    ],
-    "quantity": 20,
-    "spec": "32GB",
-    "location": "仓库C"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "电子产品",
-    "type": "电脑",
-    "subType": "笔记本",
-    "color": "银色",
-    "attribute": [
-      "全新",
-      "高性能"
-    ],
-    "quantity": 10,
-    "spec": "16GB RAM",
-    "location": "仓库A"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "电子产品",
-    "type": "电脑",
-    "subType": "台式机",
-    "color": "黑色",
-    "attribute": [
-      "组装",
-      "高性能"
-    ],
-    "quantity": 5,
-    "spec": "32GB RAM",
-    "location": "仓库D"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "服装",
-    "type": "上衣",
-    "subType": "T恤",
-    "color": "白色",
-    "attribute": [
-      "短袖",
-      "透气"
-    ],
-    "quantity": 25,
-    "spec": "L",
-    "location": "仓库E"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "服装",
-    "type": "上衣",
-    "subType": "衬衫",
-    "color": "蓝色",
-    "attribute": [
-      "正式",
-      "长袖"
-    ],
-    "quantity": 12,
-    "spec": "M",
-    "location": "仓库F"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "服装",
-    "type": "裤子",
-    "subType": "牛仔裤",
-    "color": "深蓝",
-    "attribute": [
-      "直筒",
-      "耐磨"
-    ],
-    "quantity": 18,
-    "spec": "32",
+    "spec": "10片/盒",
     "location": "仓库G"
   },
   {
     "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "服装",
-    "type": "裤子",
-    "subType": "休闲裤",
-    "color": "灰色",
-    "attribute": [
-      "宽松",
-      "舒适"
-    ],
-    "quantity": 22,
-    "spec": "34",
-    "location": "仓库H"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "电子产品",
-    "type": "手机",
-    "subType": "智能手机",
-    "color": "金色",
-    "attribute": [
-      "全新",
-      "大屏幕"
-    ],
-    "quantity": 7,
-    "spec": "64GB",
-    "location": "仓库A"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "电子产品",
-    "type": "电脑",
-    "subType": "笔记本",
-    "color": "黑色",
-    "attribute": [
-      "翻新",
-      "轻薄"
-    ],
-    "quantity": 9,
-    "spec": "8GB RAM",
-    "location": "仓库B"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "服装",
-    "type": "上衣",
-    "subType": "T恤",
-    "color": "黑色",
-    "attribute": [
-      "长袖",
-      "保暖"
-    ],
-    "quantity": 15,
-    "spec": "XL",
-    "location": "仓库C"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "服装",
-    "type": "裤子",
-    "subType": "牛仔裤",
-    "color": "浅蓝",
-    "attribute": [
-      "紧身",
-      "弹性"
-    ],
-    "quantity": 10,
-    "spec": "30",
-    "location": "仓库D"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "电子产品",
-    "type": "手机",
-    "subType": "功能机",
-    "color": "白色",
-    "attribute": [
-      "二手",
-      "耐用"
-    ],
-    "quantity": 30,
-    "spec": "16GB",
-    "location": "仓库E"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "电子产品",
-    "type": "电脑",
-    "subType": "台式机",
-    "color": "白色",
-    "attribute": [
-      "全新",
-      "静音"
-    ],
-    "quantity": 6,
-    "spec": "16GB RAM",
-    "location": "仓库F"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "服装",
-    "type": "上衣",
-    "subType": "衬衫",
-    "color": "白色",
-    "attribute": [
-      "休闲",
-      "短袖"
-    ],
-    "quantity": 14,
-    "spec": "S",
-    "location": [
-      "仓库C",
-      "仓库A"
-    ]
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "服装",
-    "type": "裤子",
-    "subType": "休闲裤",
-    "color": "卡其色",
-    "attribute": [
-      "修身",
-      "透气"
-    ],
-    "quantity": 20,
-    "spec": "36",
-    "location": "仓库H"
-  },
-  {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "电子产品",
-    "type": "手机",
-    "subType": "智能手机",
+    "category": "医疗",
+    "type": "医疗器械",
+    "subType": "体温计",
     "color": "银色",
-    "attribute": [
-      "全新",
-      "轻便"
-    ],
-    "quantity": 12,
-    "spec": "128GB",
-    "location": "仓库A"
+    "attribute": ["电子", "快速"],
+    "quantity": 30,
+    "spec": "单支",
+    "location": ["仓库H", "仓库I"]
   },
   {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "服装",
-    "type": "上衣",
-    "subType": "T恤",
+    "image": "https://gips2.baidu.com/it/u=1651586290,17201034&fm=3028&app=3028&f=JPEG&fmt=auto&q=100&size=f600_800",
+    "category": "体育",
+    "type": "运动器材",
+    "subType": "哑铃",
+    "color": "黑色",
+    "attribute": ["可调节", "防滑"],
+    "quantity": 10,
+    "spec": "5kg",
+    "location": "仓库J"
+  },
+  {
+    "image": "http://gips0.baidu.com/it/u=3560029307,576412274&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
+    "category": "体育",
+    "type": "运动服装",
+    "subType": "运动T恤",
     "color": "红色",
-    "attribute": [
-      "短袖",
-      "运动"
-    ],
-    "quantity": 18,
-    "spec": "M",
-    "location": "仓库B"
+    "attribute": ["透气", "快干"],
+    "quantity": 15,
+    "spec": "L",
+    "location": ["仓库K", "仓库L"]
   },
   {
-    "image": "http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",
-    "category": "电子产品",
-    "type": "电脑",
-    "subType": "笔记本",
-    "color": "金色",
-    "attribute": [
-      "全新",
-      "超薄"
-    ],
-    "quantity": 8,
-    "spec": "32GB RAM",
-    "location": [
-      "仓库C",
-      "仓库A"
-    ]
+    "image": "http://gips0.baidu.com/it/u=3822353666,2757632348&fm=3028&app=3028&f=JPEG&fmt=auto?w=720&h=1280",
+    "category": "学习",
+    "type": "书籍",
+    "subType": "教材",
+    "color": "蓝色",
+    "attribute": ["最新版", "附赠光盘"],
+    "quantity": 60,
+    "spec": "A4",
+    "location": "仓库M"
+  },
+  {
+    "image": "http://gips2.baidu.com/it/u=3944689179,983354166&fm=3028&app=3028&f=JPEG&fmt=auto?w=1024&h=1024",
+    "category": "学习",
+    "type": "文具",
+    "subType": "笔",
+    "color": "黑色",
+    "attribute": ["中性笔", "0.5mm"],
+    "quantity": 120,
+    "spec": "12支/盒",
+    "location": ["仓库N", "仓库O"]
   }
 ]

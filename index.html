@@ -1,37 +1,74 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <!-- 设置字符编码为 UTF-8 -->
     <meta charset="UTF-8">
+    <!-- 确保在移动设备上自适应显示 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>物品管理系统</title>
+    <!-- 引入外部 CSS 文件 -->
     <link rel="stylesheet" href="public/styles.css">
+    <!-- 添加网站图标 -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 </head>
 <body>
-    <div class="container">
+    <!-- 登录界面容器，默认显示 -->
+    <div id="loginContainer" class="login-container">
+        <h2>登录</h2>
+        <!-- 登录表单 -->
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">用户名:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">密码:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-btn">登录</button>
+        </form>
+        <!-- 显示登录错误信息 -->
+        <p id="loginError" class="error-message"></p>
+    </div>
+
+    <!-- 主内容容器，默认隐藏，登录成功后显示 -->
+    <div id="mainContainer" class="container" style="display: none;">
         <h2>物品管理系统</h2>
+        <!-- 筛选区域，分两行显示 -->
         <div class="filter-section">
-            <select id="filterCategory" onchange="updateTypeOptions()">
-                <option value="">选择类别</option>
-            </select>
-            <select id="filterType" onchange="updateSubTypeOptions()">
-                <option value="">选择类型</option>
-            </select>
-            <select id="filterSubType" onchange="updateAttributeOptions()">
-                <option value="">选择子类型</option>
-            </select>
-            <select id="filterAttribute" onchange="toggleAttributeSelection(this)">
-                <option value="">选择属性</option>
-            </select>
-            <select id="filterColor" onchange="toggleColorSelection(this)">
-                <option value="">选择颜色</option>
-            </select>
-            <select id="filterLocation" onchange="toggleLocationSelection(this)">
-                <option value="">选择位置</option>
-            </select>
-            <button class="reset-btn" onclick="resetFilters()">重置</button>
+            <!-- 第一行筛选框：类别、类型、子类型、属性 -->
+            <div class="filter-row filter-row-1">
+                <select id="filterCategory" onchange="updateTypeOptions()">
+                    <option value="">选择类别</option>
+                </select>
+                <select id="filterType" onchange="updateSubTypeOptions()">
+                    <option value="">选择类型</option>
+                </select>
+                <select id="filterSubType" onchange="updateAttributeOptions()">
+                    <option value="">选择子类型</option>
+                </select>
+                <select id="filterAttribute" onchange="toggleAttributeSelection(this)">
+                    <option value="">选择属性</option>
+                </select>
+            </div>
+            <!-- 第二行筛选框：颜色、位置、规格、重置按钮 -->
+            <div class="filter-row filter-row-2">
+                <select id="filterSpec" onchange="toggleSpecSelection(this)">
+                    <option value="">选择规格</option>
+                </select>
+                <select id="filterColor" onchange="toggleColorSelection(this)">
+                    <option value="">选择颜色</option>
+                </select>
+                <select id="filterLocation" onchange="toggleLocationSelection(this)">
+                    <option value="">选择位置</option>
+                </select>
+                <button class="reset-btn" onclick="resetFilters()">重置</button>
+            </div>
         </div>
+        <!-- 表格容器，支持水平滚动 -->
         <div class="table-wrapper">
             <table>
+                <!-- 表格头部，定义列顺序 -->
                 <thead>
                     <tr>
                         <th>图片</th>
@@ -40,19 +77,22 @@
                         <th>子类型</th>
                         <th>颜色</th>
                         <th>属性</th>
-                        <th>数量</th>
                         <th>规格</th>
+                        <th>数量</th>
                         <th>位置</th>
                     </tr>
                 </thead>
+                <!-- 表格主体，动态填充数据 -->
                 <tbody id="itemList"></tbody>
             </table>
         </div>
     </div>
+    <!-- 图片预览模态框，默认隐藏 -->
     <div id="imageModal" class="modal">
         <span class="close">×</span>
         <img class="modal-content" id="modalImage">
     </div>
+    <!-- 引入外部 JavaScript 文件 -->
     <script src="public/script.js"></script>
 </body>
 </html>
