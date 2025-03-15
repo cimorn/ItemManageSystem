@@ -48,6 +48,8 @@
   - 筛选框每行四元素，宽度固定 80px，支持左右滑动。
   - 表格字体 14px，单元格宽度 80px，图片尺寸 100x100px。
 
+
+
 ## 项目目录结构
 
 ```text
@@ -60,24 +62,35 @@ ItemManage/
 │   ├── label.json    # 分类数据文件
 │   └── password.json # 用户凭据数据文件
 ├── index.html        # 主页面
-├── open.js           # 服务器代码
+└── CHANGELOG.md      # 项目日志
 └── README.md         # 项目说明文档
 ```
 
+
+
 ### 文件说明
+
 - `data/item.json`：物品核心数据，包含图片路径、类别、类型等。
+
 - `data/label.json`：筛选标签数据，定义类别、类型映射等。
+
 - `data/password.json`：用户凭据，包含用户名和密码。
+
 - `public/styles.css`：所有样式规则，支持响应式设计。
+
 - `public/script.js`：所有逻辑代码，处理登录、筛选和展示。
+
 - `index.html`：主 HTML 文件，包含登录和主内容结构。
-- `open.js`：简单的 Node.js 服务器脚本，用于本地运行。
+
+  
 
 ## 网页预览
 
 | 电脑端 | 移动端 |
 | :----------------------------------------------------------: | :----------------------------: |
 | <img src="./images/desktop.png" alt="desktop" style="zoom: 90%;" /> | ![mobile](./images/mobile.png) |
+
+
 
 ## 运行
 
@@ -102,6 +115,8 @@ ItemManage/
 3. 访问页面：
    - 打开浏览器，输入 `http://localhost:8080`，即可看到页面。
 
+
+
 ### 使用 VS Code 的 Live Server 扩展
 
 1. 安装 VS Code：
@@ -115,6 +130,8 @@ ItemManage/
    - 打开 `index.html` 文件。
    - 右键点击文件内容，选择 “Open with Live Server”。
    - 浏览器会自动打开，通常是 `http://127.0.0.1:5500`。
+
+
 
 ## 添加自定义数据
 
@@ -134,7 +151,10 @@ ItemManage/
 3. 保存并重启服务器：
    - 保存文件后，重新运行 `node open.js` 或刷新 Live Server 页面以加载新数据。
 
+
+
 ### 示例
+
 假设添加新类别“食品”，类型“饮料”，子类型“果汁”，并添加相关物品：
 
 #### 修改 `label.json`
@@ -255,11 +275,17 @@ ItemManage/
 ]
 ```
 
+
+
 ## 未来想完成的功能
+
 - [ ] 编辑功能：允许修改物品数据并保存。
 - [ ] 分页：支持大量物品时的分页或懒加载。
 - [ ] 后端支持：集成数据库和 API，替换静态 JSON。
 - [ ] 安全性：加密密码文件，防止明文存储。
 
+
+
 ## 源码
+
 GitHub：[ItemManageSystem](https://github.com/cimorn/ItemManageSystem)
