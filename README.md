@@ -46,6 +46,10 @@
    - 用户通过用户名和密码登录，验证凭据后进入主界面。
    - 错误时显示提示信息。
      ![login](./images/login.png)
+
+> 测试账号：admin
+>
+> 测试密码：123456
    
 2. 物品筛选
    - 支持多条件筛选：类别、类型、子类型、属性、颜色、位置、规格。
@@ -117,6 +121,9 @@ ItemManage/
 
 
 ## 运行
+
+
+### 使用python
 
 ### 使用 Node.js
 
@@ -298,6 +305,17 @@ ItemManage/
   }
 ]
 ```
+
+### `DataJson.py`
+
+`data.txt数据格式`
+```plaintext
+name	image	category	type	subType	color	attribute	quantity	spec	location
+数据1	http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280	电子产品	手机	智能手机	蓝色	全新, 大屏幕	15	128GB	仓库A, 仓库B
+数据2	http://gips2.baidu.com/it/u=195724436,3554684702&fm=3028&app=3028&f=JPEG&fmt=auto?w=1280&h=960	洗护	沐浴露	滋润	白色	保湿, 香氛	20	750ml	仓库E, 仓库F
+```
+
+然后运行python文件即可.
 
 
 ## 未来想完成的功能

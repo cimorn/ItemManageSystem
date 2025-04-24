@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <!-- 设置字符编码为 UTF-8 -->
-    <meta charset="UTF-8">
-    <!-- 确保在移动设备上自适应显示 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>物品管理系统</title>
-    <!-- 引入外部 CSS 文件 -->
-    <link rel="stylesheet" href="public/styles.css">
-    <!-- 添加网站图标 -->
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-</head>
+    <head>
+        <!-- 设置字符编码为 UTF-8 -->
+        <meta charset="UTF-8">
+        <!-- 确保在移动设备上自适应显示 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>物品管理系统</title>
+        <!-- 引入外部 CSS 文件 -->
+        <link rel="stylesheet" href="public/styles.css">
+    
+        <!-- 添加图标（favicon.ico） -->
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico"> <!-- 旧版浏览器 -->
+        <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico"> <!-- 兼容 IE -->
+    </head>
 <body>
     <!-- 登录界面容器，默认显示 -->
     <div id="loginContainer" class="login-container">
@@ -72,12 +74,13 @@
                 <thead>
                     <tr>
                         <th>图片</th>
+                        <th>名称</th> <!-- 新增名称列 -->
                         <th>类别</th>
                         <th>类型</th>
                         <th>子类型</th>
-                        <th>颜色</th>
                         <th>属性</th>
                         <th>规格</th>
+                        <th>颜色</th>
                         <th>数量</th>
                         <th>位置</th>
                     </tr>

@@ -1,0 +1,12 @@
+name	image	category	type	subType	color	attribute	quantity	spec	location
+数据1	http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280	电子产品	手机	智能手机	蓝色	全新, 大屏幕	15	128GB	仓库A, 仓库B
+数据2	http://gips2.baidu.com/it/u=195724436,3554684702&fm=3028&app=3028&f=JPEG&fmt=auto?w=1280&h=960	洗护	沐浴露	滋润	白色	保湿, 香氛	20	750ml	仓库E, 仓库F
+数据3	https://gips2.baidu.com/it/u=1651586290,17201034&fm=3028&app=3028&f=JPEG&fmt=auto&q=100&size=f600_800	电子产品	手机	智能手机	蓝色	全新, 大屏幕	15	1GB	仓库AC, 仓库B
+数据4	http://gips2.baidu.com/it/u=195724436,3554684702&fm=3028&app=3028&f=JPEG&fmt=auto?w=1280&h=960	电子产品	电脑	笔记本	银色	轻薄, 高性能	8	16GB RAM	仓库C
+数据5	http://gips0.baidu.com/it/u=3822353666,2757632348&fm=3028&app=3028&f=JPEG&fmt=auto?w=720&h=1280	洗护	沐浴露	滋润	白色	保湿, 香氛	20	750ml	仓库E, 仓库F
+数据6	http://gips2.baidu.com/it/u=3944689179,983354166&fm=3028&app=3028&f=JPEG&fmt=auto?w=1024&h=1024	医疗	药品	感冒药	无色	速效, 儿童适用	40	10片/盒	仓库G
+数据7	http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280	医疗	医疗器械	体温计	银色	电子, 快速	30	单支	仓库H, 仓库I
+数据8	https://gips2.baidu.com/it/u=1651586290,17201034&fm=3028&app=3028&f=JPEG&fmt=auto&q=100&size=f600_800	体育	运动器材	哑铃	黑色	可调节, 防滑	10	5kg	仓库J
+数据9	http://gips0.baidu.com/it/u=3560029307,576412274&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280	体育	运动服装	运动T恤	红色	透气, 快干	15	L	仓库K, 仓库L
+数据10	http://gips0.baidu.com/it/u=3822353666,2757632348&fm=3028&app=3028&f=JPEG&fmt=auto?w=720&h=1280	学习	书籍	教材	蓝色	最新版, 附赠光盘	60	A4	仓库M
+数据11	http://gips2.baidu.com/it/u=3944689179,983354166&fm=3028&app=3028&f=JPEG&fmt=auto?w=1024&h=1024	学习	文具	笔	黑色	中性笔, 0.5mm	120	12支/盒	仓库N, 仓库O

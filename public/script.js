@@ -284,15 +284,17 @@ async function showItems(filterCat = '', filterType = '', filterSub = '', filter
             const row = document.createElement('tr');
             // 修改 location 显示，兼容数组和字符串
             const locationDisplay = Array.isArray(item.location) ? item.location.join(', ') : item.location || '未知';
+            const name = item.name || '未知'; // 获取名称，如果不存在则显示 '未知'
             console.log(`条目 ${index} - location 类型: ${Array.isArray(item.location) ? '数组' : typeof item.location}, 值: ${locationDisplay}`); // 调试
             row.innerHTML = `
                 <td><img src="${item.image}" alt="图片" onerror="this.src='https://via.placeholder.com/120'" onclick="openModal('${item.image}')"></td>
+                <td>${name}</td> <!-- 显示名称 -->
                 <td>${item.category}</td>
                 <td>${item.type}</td>
                 <td>${item.subType}</td>
-                <td>${item.color}</td>
                 <td>${item.attribute.join(', ')}</td>
                 <td>${item.spec}</td>
+                <td>${item.color}</td>
                 <td>${item.quantity}</td>
                 <td>${locationDisplay}</td>
             `;
